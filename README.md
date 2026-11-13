@@ -4,7 +4,7 @@
 
 支持深度思考、智能搜索、流式回答、文件上传、语音输入、回答朗读、Markdown、Mermaid、数学公式和本地聊天历史。
 
-[下载单文件 HTML](https://github.com/wenzhengshi/chat-demo-ds-single/raw/main/chat-demo.html) · [查看上游源码](https://github.com/deepseek-ai/chat-demo) · [版本说明](./UPSTREAM.md)
+[下载单文件 HTML](https://github.com/wenzhengshi/deepseek-chat-demo-single-file/raw/main/chat-demo.html) · [查看上游源码](https://github.com/deepseek-ai/chat-demo) · [版本说明](./UPSTREAM.md)
 
 > 本项目是非官方单文件构建版。上游基线为 `v0.1.1`，提交 [`5d5dd754ebc1948e977ddb880a9eb5aa25f37b4c`](https://github.com/deepseek-ai/chat-demo/commit/5d5dd754ebc1948e977ddb880a9eb5aa25f37b4c)。DeepSeek 名称和商标归其权利人所有，本仓库不代表官方发布或官方背书。
 
@@ -40,7 +40,7 @@ DeepSeek 官方 `chat-demo` 是完整的开源前端工程。对开发者很好�
 
 ### 方式一：下载后直接打开
 
-1. [下载 `chat-demo.html`](https://github.com/wenzhengshi/chat-demo-ds-single/raw/main/chat-demo.html)。
+1. [下载 `chat-demo.html`](https://github.com/wenzhengshi/deepseek-chat-demo-single-file/raw/main/chat-demo.html)。
 2. 使用较新的 Chrome、Edge 或其他现代浏览器打开。
 3. 在设置中填写 API Key，然后开始对话。
 
@@ -140,9 +140,9 @@ python -m http.server 8000
 
 ## English
 
-DeepSeek Chat Demo Single-File is an unofficial, standalone HTML build of DeepSeek's open-source `chat-demo` v0.1.1. No Node.js installation or build step is required: download `chat-demo.html`, open it in a modern browser, and enter your own DeepSeek API key.
+**DeepSeek Chat Demo Single File** is an unofficial, standalone **DeepSeek web UI** and **DeepSeek API demo** packaged as one HTML file. It is intended for anyone looking for a no-install browser chat UI, a single-file LLM frontend, a standalone HTML chatbot, or a quick way to try the DeepSeek API without setting up a build toolchain.
 
-It includes streaming chat, deep thinking, smart web search, file upload, voice input, read-aloud, Markdown, syntax highlighting, KaTeX, Mermaid, local conversation history, responsive layouts, and Chinese/English interfaces.
+No Node.js installation or build step is required: download `chat-demo.html`, open it in a modern browser, and enter your own DeepSeek API key. It includes streaming chat, deep thinking, smart web search, file upload, voice input, read-aloud, Markdown, syntax highlighting, KaTeX, Mermaid, local conversation history, responsive layouts, and Chinese/English interfaces.
 
 ## 许可证与署名
 
