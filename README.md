@@ -1,38 +1,46 @@
-# DeepSeek Chat Demo · 单文件版
+# DeepSeek Chat Demo 单文件版｜下载即开，无需安装
 
-> 本项目是 [DeepSeek 开源 `chat-demo`](https://github.com/deepseek-ai/chat-demo) 的非官方单文件构建与展示版。
->
-> 上游基线：`v0.1.1`，提交 [`5d5dd754ebc1948e977ddb880a9eb5aa25f37b4c`](https://github.com/deepseek-ai/chat-demo/commit/5d5dd754ebc1948e977ddb880a9eb5aa25f37b4c)。
->
-> 本仓库不是 DeepSeek 官方发布物，也不表示 DeepSeek 对本仓库的认可或背书。
+**DeepSeek 最新开源 [`chat-demo`](https://github.com/deepseek-ai/chat-demo) 的单个 HTML 版本。** 不用 Node.js，不用安装依赖，也不用配置构建环境。下载 [`chat-demo.html`](./chat-demo.html)，双击打开，填写自己的 API Key 就能使用。
 
-[打开聊天页面](./chat-demo.html) · [查看上游源码](https://github.com/deepseek-ai/chat-demo) · [查看基线提交](https://github.com/deepseek-ai/chat-demo/commit/5d5dd754ebc1948e977ddb880a9eb5aa25f37b4c)
+支持深度思考、智能搜索、流式回答、文件上传、语音输入、回答朗读、Markdown、Mermaid、数学公式和本地聊天历史。
+
+[下载单文件 HTML](https://github.com/wenzhengshi/chat-demo-ds-single/raw/main/chat-demo.html) · [查看上游源码](https://github.com/deepseek-ai/chat-demo) · [版本说明](./UPSTREAM.md)
+
+> 本项目是非官方单文件构建版。上游基线为 `v0.1.1`，提交 [`5d5dd754ebc1948e977ddb880a9eb5aa25f37b4c`](https://github.com/deepseek-ai/chat-demo/commit/5d5dd754ebc1948e977ddb880a9eb5aa25f37b4c)。DeepSeek 名称和商标归其权利人所有，本仓库不代表官方发布或官方背书。
 
 ![桌面端设置界面](./screenshots/01-settings-desktop.png)
 
-## 项目简介
+## 为什么做单文件版
 
-这是一个可直接打开的前端聊天演示。项目把 React 应用、样式、字体、Mermaid 运行时和其他前端依赖内联进一个 `chat-demo.html` 文件，因此界面本身无需安装依赖或启动构建服务。
+DeepSeek 官方 `chat-demo` 是完整的开源前端工程。对开发者很好，但对只想快速体验、测试 API Key、发给同事或放进资料袋的用户来说，安装 Node.js、拉取依赖和构建项目仍然有门槛。
 
-聊天功能仍然需要联网访问 DeepSeek API，并在页面设置中填写自己的 API Key。API 请求由浏览器直接发出，不经本仓库提供服务端中转。
+这个版本把 React 应用、CSS、字体、Mermaid 运行时和其他前端依赖全部内联到一个 HTML 中：
 
-## 功能
+| 使用方式 | 单文件版 | 上游源码版 |
+| --- | --- | --- |
+| 安装依赖 | 不需要 | 需要 Node.js 和 pnpm |
+| 本地构建 | 不需要 | 需要 |
+| 使用步骤 | 下载 HTML、双击、填 API Key | 安装、构建、启动服务 |
+| 分享给非开发者 | 直接发一个文件 | 需要附带完整工程或构建产物 |
+| 修改源码 | 请使用上游仓库 | 适合 |
 
-- 多轮对话、自动标题、会话重命名和删除。
-- 流式回答、停止生成、继续生成、重新生成。
-- 深度思考、智能搜索、网页阅读和引用来源。
-- 编辑用户消息，并在消息版本分支之间切换。
-- 文件上传、图片预览和拖放上传。
-- 语音输入、回答朗读和录音频谱反馈。
-- Markdown、代码高亮、KaTeX 数学公式和 Mermaid 图表。
-- 简体中文与英文、浅色与深色主题、桌面与移动端布局。
-- 本地会话持久化，以及聊天历史的 ZIP 导入与导出。
+页面本身不依赖后端服务；聊天、搜索、文件和语音功能仍会由浏览器直接访问 DeepSeek API。你的 API Key 不会上传到本仓库提供的中转服务。
+
+## 开箱即用的功能
+
+- **深度思考**：查看模型的推理过程和耗时。
+- **智能搜索**：按需联网搜索、阅读网页并展示引用来源。
+- **完整聊天界面**：流式回答、停止生成、继续生成、重新生成和消息分支。
+- **文件与语音**：上传附件、图片预览、语音输入和回答朗读。
+- **丰富内容渲染**：Markdown、代码高亮、KaTeX 和 Mermaid 图表。
+- **本地保存**：会话、设置和附件保存在当前浏览器中。
+- **桌面与手机适配**：中英文、明暗主题、响应式布局。
 
 ## 快速开始
 
-### 方式一：直接打开
+### 方式一：下载后直接打开
 
-1. 在 GitHub 中打开 [`chat-demo.html`](./chat-demo.html)，选择下载原始文件。
+1. [下载 `chat-demo.html`](https://github.com/wenzhengshi/chat-demo-ds-single/raw/main/chat-demo.html)。
 2. 使用较新的 Chrome、Edge 或其他现代浏览器打开。
 3. 在设置中填写 API Key，然后开始对话。
 
@@ -53,6 +61,15 @@ python -m http.server 8000
 ```
 
 随后访问终端提示的本地地址。仓库根目录的 `index.html` 会自动跳转到单文件应用。
+
+## 适合谁
+
+- 想快速测试 DeepSeek API Key，但不想安装开发环境的人。
+- 想把体验页面发到群里、课程资料或项目附件中的人。
+- 需要在离线环境准备界面、到现场再联网使用的人。
+- 想先看 DeepSeek 官方聊天界面效果，再决定是否研究源码的人。
+
+需要注意：单文件版降低了使用门槛，但不适合替代正式生产架构。公开部署时应使用后端代理保护 API Key，并增加访问控制、限流和内容安全策略。
 
 ## 界面预览
 
@@ -121,6 +138,12 @@ python -m http.server 8000
 - 语音功能建议在 `HTTPS` 或 `localhost` 环境中使用。
 - 本项目不承诺 API 或页面功能的长期兼容性；上游或 API 变化后可能需要重新构建。
 
+## English
+
+DeepSeek Chat Demo Single-File is an unofficial, standalone HTML build of DeepSeek's open-source `chat-demo` v0.1.1. No Node.js installation or build step is required: download `chat-demo.html`, open it in a modern browser, and enter your own DeepSeek API key.
+
+It includes streaming chat, deep thinking, smart web search, file upload, voice input, read-aloud, Markdown, syntax highlighting, KaTeX, Mermaid, local conversation history, responsive layouts, and Chinese/English interfaces.
+
 ## 许可证与署名
 
 上游项目由 DeepSeek 以 [MIT License](https://github.com/deepseek-ai/chat-demo/blob/main/LICENSE) 发布。本仓库保留完整许可证原文，见 [`LICENSE`](./LICENSE)。
@@ -128,3 +151,7 @@ python -m http.server 8000
 DeepSeek 名称、标识及相关商标归其权利人所有。本项目仅用于说明代码来源，不代表官方关系。
 
 第三方依赖仍受各自许可证约束。
+
+---
+
+如果这个单文件版帮你省下了安装和构建时间，欢迎点一个 **Star**，或把仓库分享给正在体验 DeepSeek 开源 `chat-demo` 的朋友。
